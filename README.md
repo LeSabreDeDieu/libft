@@ -11,7 +11,7 @@ Libft is a library of standard C functions, developed by sgabsi. This library pr
 
 To use the libft library in your project:
 
-1. Clone the repository: `git clone [URL_of_the_repository]`
+1. Clone the repository: `git clone [[URL_of_the_repository]](https://github.com/LeSabreDeDieu/libft-42.git)`
 2. Include the `libft.h` file in your source files: `#include "libft.h"`
 3. Compile your files with `libft.a`: `gcc -o my_program my_program.c libft.a`
 

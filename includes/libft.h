@@ -6,7 +6,7 @@
 /*   By: sgabsi <sgabsi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 11:48:24 by sgabsi            #+#    #+#             */
-/*   Updated: 2024/01/10 13:31:14 by sgabsi           ###   ########.fr       */
+/*   Updated: 2024/01/22 14:16:32 by sgabsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdarg.h>
+# include <stdint.h>
 
 // BUFFER_SIZE FOR GET_NEXT_LINE
 # ifndef BUFFER_SIZE
@@ -427,5 +429,13 @@ char				*get_next_line(int fd);
  * @return The concatenated string.
  */
 char				*ft_strjoin_gnl(char *s1, char const *s2);
+
+int	ft_printf(const char *format, ...);
+int	ft_printstr(char *str);
+int	ft_printnbr(int n);
+int	ft_printpourcent(void);
+int	ft_print_hex(unsigned int num, const char format);
+int	ft_print_ptr(void *ptr);
+int	ft_print_unsigned(unsigned int n);
 
 #endif

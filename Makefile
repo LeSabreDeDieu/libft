@@ -6,7 +6,7 @@
 #    By: sgabsi <sgabsi@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/07 13:44:09 by sgabsi            #+#    #+#              #
-#    Updated: 2024/01/10 13:09:26 by sgabsi           ###   ########.fr        #
+#    Updated: 2024/01/22 14:21:18 by sgabsi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ INCDIR		=	./includes
 OBJDIR		=	objs
 
 # Sources
-SRC_SUBDIRS	=	ft_is ft_lst ft_mem ft_put ft_str ft_to gnl
+SRC_SUBDIRS	=	ft_is ft_lst ft_mem ft_put ft_str ft_to gnl printf
 SRC_FILES	=	ft_is/ft_isalnum.c ft_is/ft_isalpha.c ft_is/ft_isascii.c \
 				ft_is/ft_isdigit.c ft_is/ft_isprint.c \
 				ft_lst/ft_lstadd_back.c ft_lst/ft_lstadd_front.c \
@@ -41,7 +41,10 @@ SRC_FILES	=	ft_is/ft_isalnum.c ft_is/ft_isalpha.c ft_is/ft_isascii.c \
 				ft_str/ft_strtrim.c ft_str/ft_substr.c \
 				ft_to/ft_atoi.c ft_to/ft_itoa.c \
 				ft_to/ft_tolower.c ft_to/ft_toupper.c \
-				gnl/get_next_line.c gnl/get_next_line_utils.c
+				gnl/get_next_line.c gnl/get_next_line_utils.c \
+				printf/ft_print_hex.c printf/ft_print_ptr.c \
+				printf/ft_print_unsigned.c printf/ft_printf_utils.c \
+				printf/ft_printf.c
 
 # Objects
 OBJ_SUBDIRS	=	$(SRC_SUBDIRS:%=$(OBJDIR)/%)
@@ -61,10 +64,10 @@ COUNT		=	1
 TOTAL_FILES	=	$(shell find . -type f -name "*.c" | wc -l)
 
 # Colors
-GREEN		=	\033[0;32m
-YELLOW		=	\033[0;33m
-RED			=	\033[0;31m
-NC			=	\033[0m
+GREEN		=	$(echo -e "\033[0;32m")
+YELLOW		=	$(echo -e "\033[0;33m")
+RED			=	$(echo -e "\033[0;31m")
+NC			=	$(echo -e "\033[0m")
 
 #################
 ##  TARGETS    ##

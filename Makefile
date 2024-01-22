@@ -6,7 +6,7 @@
 #    By: sgabsi <sgabsi@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/07 13:44:09 by sgabsi            #+#    #+#              #
-#    Updated: 2024/01/22 14:21:18 by sgabsi           ###   ########.fr        #
+#    Updated: 2024/01/22 14:35:30 by sgabsi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,36 +15,36 @@
 #################
 
 # Directories
-SRCDIR		=	./
+SRCDIR		=	./srcs
 INCDIR		=	./includes
 OBJDIR		=	objs
 
 # Sources
 SRC_SUBDIRS	=	ft_is ft_lst ft_mem ft_put ft_str ft_to gnl printf
-SRC_FILES	=	ft_is/ft_isalnum.c ft_is/ft_isalpha.c ft_is/ft_isascii.c \
-				ft_is/ft_isdigit.c ft_is/ft_isprint.c \
-				ft_lst/ft_lstadd_back.c ft_lst/ft_lstadd_front.c \
-				ft_lst/ft_lstclear.c ft_lst/ft_lstdelone.c \
-				ft_lst/ft_lstiter.c ft_lst/ft_lstlast.c \
-				ft_lst/ft_lstmap.c ft_lst/ft_lstnew.c ft_lst/ft_lstsize.c \
-				ft_mem/ft_bzero.c ft_mem/ft_calloc.c ft_mem/ft_memchr.c \
-				ft_mem/ft_memcmp.c ft_mem/ft_memcpy.c \
-				ft_mem/ft_memmove.c ft_mem/ft_memset.c \
-				ft_put/ft_putchar_fd.c ft_put/ft_putendl_fd.c \
-				ft_put/ft_putnbr_fd.c ft_put/ft_putstr_fd.c \
-				ft_str/ft_split.c ft_str/ft_strchr.c \
-				ft_str/ft_strdup.c ft_str/ft_striteri.c \
-				ft_str/ft_strjoin.c ft_str/ft_strlcat.c \
-				ft_str/ft_strlcpy.c ft_str/ft_strlen.c \
-				ft_str/ft_strmapi.c ft_str/ft_strncmp.c \
-				ft_str/ft_strnstr.c ft_str/ft_strrchr.c \
-				ft_str/ft_strtrim.c ft_str/ft_substr.c \
-				ft_to/ft_atoi.c ft_to/ft_itoa.c \
-				ft_to/ft_tolower.c ft_to/ft_toupper.c \
-				gnl/get_next_line.c gnl/get_next_line_utils.c \
-				printf/ft_print_hex.c printf/ft_print_ptr.c \
-				printf/ft_print_unsigned.c printf/ft_printf_utils.c \
-				printf/ft_printf.c
+SRC_FILES	=	$(SRCDIR)/ft_is/ft_isalnum.c $(SRCDIR)/ft_is/ft_isalpha.c $(SRCDIR)/ft_is/ft_isascii.c \
+				$(SRCDIR)/ft_is/ft_isdigit.c $(SRCDIR)/ft_is/ft_isprint.c \
+				$(SRCDIR)/ft_lst/ft_lstadd_back.c $(SRCDIR)/ft_lst/ft_lstadd_front.c \
+				$(SRCDIR)/ft_lst/ft_lstclear.c $(SRCDIR)/ft_lst/ft_lstdelone.c \
+				$(SRCDIR)/ft_lst/ft_lstiter.c $(SRCDIR)/ft_lst/ft_lstlast.c \
+				$(SRCDIR)/ft_lst/ft_lstmap.c $(SRCDIR)/ft_lst/ft_lstnew.c $(SRCDIR)/ft_lst/ft_lstsize.c \
+				$(SRCDIR)/ft_mem/ft_bzero.c $(SRCDIR)/ft_mem/ft_calloc.c $(SRCDIR)/ft_mem/ft_memchr.c \
+				$(SRCDIR)/ft_mem/ft_memcmp.c $(SRCDIR)/ft_mem/ft_memcpy.c \
+				$(SRCDIR)/ft_mem/ft_memmove.c $(SRCDIR)/ft_mem/ft_memset.c \
+				$(SRCDIR)/ft_put/ft_putchar_fd.c $(SRCDIR)/ft_put/ft_putendl_fd.c \
+				$(SRCDIR)/ft_put/ft_putnbr_fd.c $(SRCDIR)/ft_put/ft_putstr_fd.c \
+				$(SRCDIR)/ft_str/ft_split.c $(SRCDIR)/ft_str/ft_strchr.c \
+				$(SRCDIR)/ft_str/ft_strdup.c $(SRCDIR)/ft_str/ft_striteri.c \
+				$(SRCDIR)/ft_str/ft_strjoin.c $(SRCDIR)/ft_str/ft_strlcat.c \
+				$(SRCDIR)/ft_str/ft_strlcpy.c $(SRCDIR)/ft_str/ft_strlen.c \
+				$(SRCDIR)/ft_str/ft_strmapi.c $(SRCDIR)/ft_str/ft_strncmp.c \
+				$(SRCDIR)/ft_str/ft_strnstr.c $(SRCDIR)/ft_str/ft_strrchr.c \
+				$(SRCDIR)/ft_str/ft_strtrim.c $(SRCDIR)/ft_str/ft_substr.c \
+				$(SRCDIR)/ft_to/ft_atoi.c $(SRCDIR)/ft_to/ft_itoa.c \
+				$(SRCDIR)/ft_to/ft_tolower.c $(SRCDIR)/ft_to/ft_toupper.c \
+				$(SRCDIR)/gnl/get_next_line.c $(SRCDIR)/gnl/get_next_line_utils.c \
+				$(SRCDIR)/printf/ft_print_hex.c $(SRCDIR)/printf/ft_print_ptr.c \
+				$(SRCDIR)/printf/ft_print_unsigned.c $(SRCDIR)/printf/ft_printf_utils.c \
+				$(SRCDIR)/printf/ft_printf.c
 
 # Objects
 OBJ_SUBDIRS	=	$(SRC_SUBDIRS:%=$(OBJDIR)/%)

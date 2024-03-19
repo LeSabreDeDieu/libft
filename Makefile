@@ -6,7 +6,7 @@
 #    By: sgabsi <sgabsi@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/07 13:44:09 by sgabsi            #+#    #+#              #
-#    Updated: 2024/01/22 14:35:30 by sgabsi           ###   ########.fr        #
+#    Updated: 2024/03/19 09:18:55 by sgabsi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,40 +15,107 @@
 #################
 
 # Directories
-SRCDIR		=	./srcs
-INCDIR		=	./includes
-OBJDIR		=	objs
+SRC_SUBDIRS			=	ft_is ft_lst ft_mem ft_put ft_str ft_to gnl printf
+SRCDIR				=	./srcs
+INCDIR				=	./includes
+OBJDIR				=	objs
 
 # Sources
-SRC_SUBDIRS	=	ft_is ft_lst ft_mem ft_put ft_str ft_to gnl printf
-SRC_FILES	=	$(SRCDIR)/ft_is/ft_isalnum.c $(SRCDIR)/ft_is/ft_isalpha.c $(SRCDIR)/ft_is/ft_isascii.c \
-				$(SRCDIR)/ft_is/ft_isdigit.c $(SRCDIR)/ft_is/ft_isprint.c \
-				$(SRCDIR)/ft_lst/ft_lstadd_back.c $(SRCDIR)/ft_lst/ft_lstadd_front.c \
-				$(SRCDIR)/ft_lst/ft_lstclear.c $(SRCDIR)/ft_lst/ft_lstdelone.c \
-				$(SRCDIR)/ft_lst/ft_lstiter.c $(SRCDIR)/ft_lst/ft_lstlast.c \
-				$(SRCDIR)/ft_lst/ft_lstmap.c $(SRCDIR)/ft_lst/ft_lstnew.c $(SRCDIR)/ft_lst/ft_lstsize.c \
-				$(SRCDIR)/ft_mem/ft_bzero.c $(SRCDIR)/ft_mem/ft_calloc.c $(SRCDIR)/ft_mem/ft_memchr.c \
-				$(SRCDIR)/ft_mem/ft_memcmp.c $(SRCDIR)/ft_mem/ft_memcpy.c \
-				$(SRCDIR)/ft_mem/ft_memmove.c $(SRCDIR)/ft_mem/ft_memset.c \
-				$(SRCDIR)/ft_put/ft_putchar_fd.c $(SRCDIR)/ft_put/ft_putendl_fd.c \
-				$(SRCDIR)/ft_put/ft_putnbr_fd.c $(SRCDIR)/ft_put/ft_putstr_fd.c \
-				$(SRCDIR)/ft_str/ft_split.c $(SRCDIR)/ft_str/ft_strchr.c \
-				$(SRCDIR)/ft_str/ft_strdup.c $(SRCDIR)/ft_str/ft_striteri.c \
-				$(SRCDIR)/ft_str/ft_strjoin.c $(SRCDIR)/ft_str/ft_strlcat.c \
-				$(SRCDIR)/ft_str/ft_strlcpy.c $(SRCDIR)/ft_str/ft_strlen.c \
-				$(SRCDIR)/ft_str/ft_strmapi.c $(SRCDIR)/ft_str/ft_strncmp.c \
-				$(SRCDIR)/ft_str/ft_strnstr.c $(SRCDIR)/ft_str/ft_strrchr.c \
-				$(SRCDIR)/ft_str/ft_strtrim.c $(SRCDIR)/ft_str/ft_substr.c \
-				$(SRCDIR)/ft_to/ft_atoi.c $(SRCDIR)/ft_to/ft_itoa.c \
-				$(SRCDIR)/ft_to/ft_tolower.c $(SRCDIR)/ft_to/ft_toupper.c \
-				$(SRCDIR)/gnl/get_next_line.c $(SRCDIR)/gnl/get_next_line_utils.c \
-				$(SRCDIR)/printf/ft_print_hex.c $(SRCDIR)/printf/ft_print_ptr.c \
-				$(SRCDIR)/printf/ft_print_unsigned.c $(SRCDIR)/printf/ft_printf_utils.c \
-				$(SRCDIR)/printf/ft_printf.c
+# ft_is
+SRCS_IS_DIR			=	ft_is
+SRCS_IS_LIST		=	ft_isalnum.c		\
+						ft_isalpha.c		\
+						ft_isascii.c		\
+						ft_isdigit.c		\
+						ft_isprint.c
+SRCS_IS				=	$(addprefix $(SRCS_IS_DIR)/, $(SRCS_IS_LIST))
+
+#ft_lst
+SRCS_LST_DIR		=	ft_lst
+SRCS_LST_LIST		=	ft_lstadd_back.c	\
+						ft_lstadd_front.c	\
+						ft_lstclear.c		\
+						ft_lstdelone.c		\
+						ft_lstiter.c		\
+						ft_lstlast.c		\
+						ft_lstmap.c			\
+						ft_lstnew.c			\
+						ft_lstsize.c
+SRCS_LST			=	$(addprefix $(SRCS_LST_DIR)/, $(SRCS_LST_LIST))
+
+#ft_mem
+SRCS_MEM_DIR		=	ft_mem
+SRCS_MEM_LIST		=	ft_bzero.c			\
+						ft_calloc.c			\
+						ft_memchr.c			\
+						ft_memcmp.c			\
+						ft_memcpy.c			\
+						ft_memmove.c		\
+						ft_memset.c
+SRCS_MEM			=	$(addprefix $(SRCS_MEM_DIR)/, $(SRCS_MEM_LIST))
+
+#ft_put
+SRCS_PUT_DIR		=	ft_put
+SRCS_PUT_LIST		=	ft_putchar_fd.c 	\
+						ft_putendl_fd.c 	\
+						ft_putnbr_fd.c 		\
+						ft_putstr_fd.c
+SRCS_PUT			=	$(addprefix $(SRCS_PUT_DIR)/, $(SRCS_PUT_LIST))
+
+#ft_str
+SRCS_STR_DIR		=	ft_str
+SRCS_STR_LIST		=	ft_split.c			\
+						ft_strchr.c			\
+						ft_strdup.c			\
+						ft_striteri.c		\
+						ft_strjoin.c		\
+						ft_strlcat.c		\
+						ft_strlcpy.c		\
+						ft_strlen.c			\
+						ft_strmapi.c		\
+						ft_strncmp.c		\
+						ft_strnstr.c		\
+						ft_strrchr.c		\
+						ft_strtrim.c		\
+						ft_substr.c
+SRCS_STR			=	$(addprefix $(SRCS_STR_DIR)/, $(SRCS_STR_LIST))
+
+#ft_to
+SRCS_TO_DIR			=	ft_to
+SRCS_TO_LIST		=	ft_atoi.c				\
+						ft_itoa.c				\
+						ft_tolower.c			\
+						ft_toupper.c
+SRCS_TO				=	$(addprefix $(SRCS_TO_DIR)/, $(SRCS_TO_LIST))
+
+#ft_gnl
+SRCS_GNL_DIR		=	gnl
+SRCS_GNL_LIST		=	get_next_line.c			\
+						get_next_line_utils.c
+SRCS_GNL			=	$(addprefix $(SRCS_GNL_DIR)/, $(SRCS_GNL_LIST))
+
+#ft_printf
+SRCS_PRINTF_DIR		=	printf
+SRCS_PRINTF_LIST	=	ft_print_hex.c 			\
+						ft_print_ptr.c			\
+						ft_print_unsigned.c		\
+						ft_printf_utils.c		\
+						ft_printf.c
+SRCS_PRINTF			=	$(addprefix $(SRCS_PRINTF_DIR)/, $(SRCS_PRINTF_LIST))
+
+SRC_LIST			= 	$(SRCS_IS)				\
+						$(SRCS_LST)				\
+						$(SRCS_MEM)				\
+						$(SRCS_PUT)				\
+						$(SRCS_STR)				\
+						$(SRCS_TO)				\
+						$(SRCS_GNL)				\
+						$(SRCS_PRINTF)
+SRCS				=	$(addprefix $(SRCDIR)/, $(SRC_LIST))
 
 # Objects
 OBJ_SUBDIRS	=	$(SRC_SUBDIRS:%=$(OBJDIR)/%)
-OBJ			=	$(SRC_FILES:%.c=$(OBJDIR)/%.o)
+OBJ			=	$(SRCS:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
 
 # Output
 NAME		=	libft.a
@@ -68,6 +135,7 @@ GREEN		=	$(echo -e "\033[0;32m")
 YELLOW		=	$(echo -e "\033[0;33m")
 RED			=	$(echo -e "\033[0;31m")
 NC			=	$(echo -e "\033[0m")
+KL			=	\033[K
 
 #################
 ##  TARGETS    ##
@@ -84,19 +152,13 @@ pre_comp :
 
 $(NAME): $(OBJ)
 	@ar rcs $(NAME) $(OBJ)
-	@printf "\r% 200s"
-	@echo "\r$(GREEN)********* Compilation terminée avec succès! *********$(NC)"
-	@echo "$(GREEN)********* La librairie $(NAME) a été créée. *********$(NC)"
-	
-bonus: $(OBJ) $(BOBJ)
-	@ar rcs $(NAME) $(OBJ) $(BOBJ)
-	@echo "$(GREEN)**** Compilation des bonus terminée avec succès! ****$(NC)"
+	@echo -e "\r$(GREEN)********* Compilation terminée avec succès! *********$(NC)$(KL)"
 	@echo "$(GREEN)********* La librairie $(NAME) a été créée. *********$(NC)"
 
-$(OBJDIR)/%.o: %.c
+$(OBJDIR)/%.o: $(SRCS)
 	@mkdir -p $(dir $@)
 	@$(CC) $(CFLAGS) $(OPTIONS) -o $@ -c $<
-	@printf "\rCompiling files: [%-50s] %3d%% (%d/%d) %s % 10s" \
+	@printf "\rCompiling files: [%-50s] %3d%% (%d/%d) %s$(KL)" \
 		"$(shell printf '=%.0s' $$(seq 1 $$(($(COUNT) * 50 / $(TOTAL_FILES)))))" \
 		$$(($(COUNT) * 100 / $(TOTAL_FILES))) \
 		$(COUNT) \
@@ -115,4 +177,4 @@ fclean: clean
 	
 re: fclean all
 
-.PHONY: all bonus clean fclean re
+.PHONY: all clean fclean re

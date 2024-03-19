@@ -6,7 +6,7 @@
 #    By: sgabsi <sgabsi@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/07 13:44:09 by sgabsi            #+#    #+#              #
-#    Updated: 2024/03/19 09:18:55 by sgabsi           ###   ########.fr        #
+#    Updated: 2024/03/19 09:21:42 by sgabsi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -131,10 +131,10 @@ COUNT		=	1
 TOTAL_FILES	=	$(shell find . -type f -name "*.c" | wc -l)
 
 # Colors
-GREEN		=	$(echo -e "\033[0;32m")
-YELLOW		=	$(echo -e "\033[0;33m")
-RED			=	$(echo -e "\033[0;31m")
-NC			=	$(echo -e "\033[0m")
+GREEN		=	\033[0;32m
+YELLOW		=	\033[0;33m
+RED			=	\033[0;31m
+NC			=	\033[0m
 KL			=	\033[K
 
 #################

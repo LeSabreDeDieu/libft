@@ -6,7 +6,7 @@
 #    By: sgabsi <sgabsi@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/07 13:44:09 by sgabsi            #+#    #+#              #
-#    Updated: 2024/03/19 09:21:42 by sgabsi           ###   ########.fr        #
+#    Updated: 2024/09/18 16:20:12 by sgabsi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,8 @@ SRCS_IS_LIST		=	ft_isalnum.c		\
 						ft_isalpha.c		\
 						ft_isascii.c		\
 						ft_isdigit.c		\
-						ft_isprint.c
+						ft_isprint.c		\
+						ft_isspace.c
 SRCS_IS				=	$(addprefix $(SRCS_IS_DIR)/, $(SRCS_IS_LIST))
 
 #ft_lst
@@ -65,6 +66,7 @@ SRCS_PUT			=	$(addprefix $(SRCS_PUT_DIR)/, $(SRCS_PUT_LIST))
 #ft_str
 SRCS_STR_DIR		=	ft_str
 SRCS_STR_LIST		=	ft_split.c			\
+						ft_str_replace.c	\
 						ft_strchr.c			\
 						ft_strdup.c			\
 						ft_striteri.c		\
@@ -123,7 +125,7 @@ NAMESO		=	libft.so
 
 # Compiler
 CC			=	cc
-CFLAGS		=	-Wall -Werror -Wextra -O3 -ffreestanding -nostdlib
+CFLAGS		=	-Wall -Werror -Wextra -g3 #en-O3 -ffreestanding -nostdlib
 OPTIONS		=	-I $(INCDIR)
 
 #Progress bar
@@ -155,7 +157,7 @@ $(NAME): $(OBJ)
 	@echo -e "\r$(GREEN)********* Compilation terminée avec succès! *********$(NC)$(KL)"
 	@echo "$(GREEN)********* La librairie $(NAME) a été créée. *********$(NC)"
 
-$(OBJDIR)/%.o: $(SRCS)
+$(OBJDIR)/%.o: $(SRCDIR)/%.c
 	@mkdir -p $(dir $@)
 	@$(CC) $(CFLAGS) $(OPTIONS) -o $@ -c $<
 	@printf "\rCompiling files: [%-50s] %3d%% (%d/%d) %s$(KL)" \

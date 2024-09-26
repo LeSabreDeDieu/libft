@@ -6,7 +6,7 @@
 /*   By: sgabsi <sgabsi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 18:07:33 by sgabsi            #+#    #+#             */
-/*   Updated: 2024/01/10 13:21:01 by sgabsi           ###   ########.fr       */
+/*   Updated: 2024/05/27 13:40:50 by sgabsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ char	*ft_read_save(int fd, char *save)
 	char	*buff;
 	int		nchar_read;
 
-	buff = (char *)calloc(BUFFER_SIZE + 1, sizeof(char));
+	buff = (char *)ft_calloc(BUFFER_SIZE + 1, sizeof(char));
 	if (!buff)
 		return (0);
 	nchar_read = 1;

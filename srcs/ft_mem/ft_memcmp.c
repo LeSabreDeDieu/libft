@@ -6,7 +6,7 @@
 /*   By: sgabsi <sgabsi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 11:59:26 by sgabsi            #+#    #+#             */
-/*   Updated: 2023/11/17 12:34:45 by sgabsi           ###   ########.fr       */
+/*   Updated: 2024/05/17 09:49:09 by sgabsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	while (n > 0)
 	{
 		if (*str1 != *str2)
-		{
 			return (*str1 - *str2);
-		}
 		n--;
 		str1++;
 		str2++;

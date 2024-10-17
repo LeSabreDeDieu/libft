@@ -125,7 +125,7 @@ NAMESO		=	libft.so
 
 # Compiler
 CC			=	cc
-CFLAGS		=	-Wall -Werror -Wextra -g3 #en-O3 -ffreestanding -nostdlib
+CFLAGS		=	-Wall -Werror -Wextra #-g3 -O3 -ffreestanding -nostdlib
 OPTIONS		=	-I $(INCDIR)
 
 #Progress bar

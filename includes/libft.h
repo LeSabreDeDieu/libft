@@ -6,7 +6,7 @@
 /*   By: sgabsi <sgabsi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 11:48:24 by sgabsi            #+#    #+#             */
-/*   Updated: 2024/09/24 11:17:56 by sgabsi           ###   ########.fr       */
+/*   Updated: 2024/10/23 18:04:24 by sgabsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -156,11 +156,60 @@ char				**ft_split(char const *s, char c);
 char				*ft_itoa(int n);
 
 /**
+ * @brief Converts an long 'n' to a string representation.
+ * @param n The long integer to convert.
+ * @return The string representation of 'n', or NULL if the allocation fails.
+ */
+char				*ft_ltoa(long n);
+
+/**
+ * @brief Converts an long long 'n' to a string representation.
+ * @param n The long long integer to convert.
+ * @return The string representation of 'n', or NULL if the allocation fails.
+ */
+char				*ft_lltoa(long long n);
+
+/**
  * @brief Converts a string 'str' to an integer.
  * @param str The string to convert.
  * @return The converted integer value.
  */
 int					ft_atoi(const char *str);
+
+/**
+ * @brief Converts a string 'str' to an unsigned integer.
+ * @param str The string to convert.
+ * @return The converted unsigned integer value.
+ */
+unsigned int		ft_atou(const char *str);
+
+/**
+ * @brief Converts a string 'str' to an long.
+ * @param str The string to convert.
+ * @return The converted long value.
+ */
+long				ft_atol(const char *str);
+
+/**
+ * @brief Converts a string 'str' to an unsigned long.
+ * @param str The string to convert.
+ * @return The converted unsigned long value.
+ */
+unsigned long		ft_atoul(const char *str);
+
+/**
+ * @brief Converts a string 'str' to an long long.
+ * @param str The string to convert.
+ * @return The converted long long value.
+ */
+long long			ft_atoll(const char *str);
+
+/**
+ * @brief Converts a string 'str' to an unsigned long long.
+ * @param str The string to convert.
+ * @return The converted unsigned long long value.
+ */
+unsigned long long	ft_atoull(const char *str);
 
 /**
  * @brief Checks if the given character 'c' is alphanumeric.
@@ -351,13 +400,15 @@ char				*ft_strdup(const char *s1);
  * @brief Writes the character 'c' to the file descriptor 'fd'.
  * @param c The character to write.
  * @param fd The file descriptor.
+ * @return The number of bytes written, or a negative value if an error occurs.
  */
-void				ft_putchar_fd(char c, int fd);
+int					ft_putchar_fd(char c, int fd);
 
 /**
  * @brief Writes the string 's' to the file descriptor 'fd'.
  * @param s The string to write.
  * @param fd The file descriptor.
+ * @return The number of bytes written, or a negative value if an error occurs.
  */
 int					ft_putstr_fd(char *s, int fd);
 
@@ -367,15 +418,17 @@ int					ft_putstr_fd(char *s, int fd);
 	to the file descriptor 'fd'.
  * @param s The string to write.
  * @param fd The file descriptor.
+ * @return The number of bytes written, or a negative value if an error occurs.
  */
-void				ft_putendl_fd(char *s, int fd);
+int					ft_putendl_fd(char *s, int fd);
 
 /**
  * @brief Writes the integer 'n' to the file descriptor 'fd'.
  * @param n The integer to write.
  * @param fd The file descriptor.
+ * @return The number of bytes written, or a negative value if an error occurs.
  */
-void				ft_putnbr_fd(int n, int fd);
+int					ft_putnbr_fd(int n, int fd);
 
 /**
  * @brief Creates a new node with the specified content.
@@ -491,24 +544,35 @@ char				*ft_strndup(const char *s1, size_t n);
 
 /**
  * @brief Writes formatted output to the standard output.
+ * 
  * @param format The format string.
  * @return The number of characters printed, or a negative value
  * if an error occurs.
+ * 
  * @note The format string can contain format specifiers that begin
- * with a percent sign (%).
- * Each format specifier starts with a percent sign (%) and ends with
- * a conversion specifier.
- * The conversion specifier is a character that specifies the type
- *  of conversion to be applied.
+ * with a percent sign (%). Each format specifier starts with a
+ * percent sign (%) and ends with a conversion specifier. The
+ * conversion specifier is a character that specifies the type of
+ * conversion to be applied.
+ * 
  * The format specifiers supported by this function are:
+ * 
  * - %c: Character
+ * 
  * - %s: String
+ * 
  * - %d: Signed decimal integer
+ * 
  * - %i: Signed decimal integer
+ * 
  * - %u: Unsigned decimal integer
+ * 
  * - %x: Unsigned hexadecimal integer (lowercase)
+ * 
  * - %X: Unsigned hexadecimal integer (uppercase)
+ * 
  * - %p: Pointer
+ * 
  * - %%: Percent sign
  */
 int					ft_printf(const char *format, ...);

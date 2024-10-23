@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_atoll.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sgabsi <sgabsi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 17:54:56 by sgabsi            #+#    #+#             */
-/*   Updated: 2024/10/23 18:02:37 by sgabsi           ###   ########.fr       */
+/*   Updated: 2024/10/23 18:02:17 by sgabsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+long long	ft_atoll(const char *str)
 {
-	int	neg;
-	int	num;
+	long long	num;
+	int			neg;
 
 	neg = 1;
 	num = 0;
@@ -27,7 +27,7 @@ int	ft_atoi(const char *str)
 			neg *= -1;
 		++str;
 	}
-	while (*str && (*str >= '0' && *str <= '9'))
+	while ((*str >= '0' && *str <= '9') && *str)
 	{
 		num = num * 10 + (*str - '0');
 		++str;
@@ -35,9 +35,9 @@ int	ft_atoi(const char *str)
 	return (num * neg);
 }
 
-unsigned int	ft_atou(const char *str)
+unsigned long long	ft_atoull(const char *str)
 {
-	int	num;
+	unsigned long long	num;
 
 	num = 0;
 	while (*str && ft_isspace(*str) && (*str == '+' || *str == '-'))

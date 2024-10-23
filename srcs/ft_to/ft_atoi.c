@@ -21,7 +21,7 @@ int	ft_atoi(const char *str)
 	neg = 1;
 	num = 0;
 	i = 0;
-	while (str[i] && ft_is_space(str[i]))
+	while (str[i] && ft_isspace(str[i]))
 		i++;
 	if (str[i] == '+' || str[i] == '-')
 	{

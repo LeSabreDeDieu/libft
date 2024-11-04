@@ -18,10 +18,10 @@ int	ft_putendl_fd(char *s, int fd)
 	int		ret;
 
 	if (!s)
-		return ;
+		return (-1);
 	str = ft_strjoin(s, "\n");
 	if (!str)
-		return ;
+		return (-1);
 	ret = ft_putstr_fd(str, fd);
 	free(str);
 	return (ret);

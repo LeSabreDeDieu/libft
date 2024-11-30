@@ -6,7 +6,7 @@
 /*   By: sgabsi <sgabsi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 11:48:24 by sgabsi            #+#    #+#             */
-/*   Updated: 2024/10/23 18:04:24 by sgabsi           ###   ########.fr       */
+/*   Updated: 2024/11/30 12:08:16 by sgabsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -290,6 +290,16 @@ int					ft_memcmp(const void *s1, const void *s2, size_t n);
 	to match, or be greater than 's2'.
  */
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
+
+/**
+ * @brief Compares the strings 's1' and 's2'.
+ * @param s1 The first string.
+ * @param s2 The second string.
+ * @return An integer less than, equal to,
+	or greater than zero if 's1' is found, respectively, to be less than,
+	to match, or be greater than 's2'.
+ */
+int					ft_strcmp(const char *s1, const char *s2);
 
 /**
  * @brief Copies up to 'size' characters from the string 'src' to 'dest'.

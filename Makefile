@@ -6,7 +6,7 @@
 #    By: sgabsi <sgabsi@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/07 13:44:09 by sgabsi            #+#    #+#              #
-#    Updated: 2024/09/18 16:20:12 by sgabsi           ###   ########.fr        #
+#    Updated: 2024/11/30 12:06:08 by sgabsi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,6 +68,7 @@ SRCS_STR_DIR		=	ft_str
 SRCS_STR_LIST		=	ft_split.c			\
 						ft_str_replace.c	\
 						ft_strchr.c			\
+						ft_strcmp.cc		\
 						ft_strdup.c			\
 						ft_striteri.c		\
 						ft_strjoin.c		\
@@ -85,7 +86,11 @@ SRCS_STR			=	$(addprefix $(SRCS_STR_DIR)/, $(SRCS_STR_LIST))
 #ft_to
 SRCS_TO_DIR			=	ft_to
 SRCS_TO_LIST		=	ft_atoi.c				\
+						ft_atol.c				\
+						ft_atoll.c				\
 						ft_itoa.c				\
+						ft_lltoa.c				\
+						ft_ltoa.c				\
 						ft_tolower.c			\
 						ft_toupper.c
 SRCS_TO				=	$(addprefix $(SRCS_TO_DIR)/, $(SRCS_TO_LIST))

@@ -6,7 +6,7 @@
 #    By: sgabsi <sgabsi@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/07 13:44:09 by sgabsi            #+#    #+#              #
-#    Updated: 2024/11/30 12:06:08 by sgabsi           ###   ########.fr        #
+#    Updated: 2024/11/30 12:15:42 by sgabsi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,7 +68,7 @@ SRCS_STR_DIR		=	ft_str
 SRCS_STR_LIST		=	ft_split.c			\
 						ft_str_replace.c	\
 						ft_strchr.c			\
-						ft_strcmp.cc		\
+						ft_strcmp.c			\
 						ft_strdup.c			\
 						ft_striteri.c		\
 						ft_strjoin.c		\

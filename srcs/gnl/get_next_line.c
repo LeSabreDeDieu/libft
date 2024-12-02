@@ -6,7 +6,7 @@
 /*   By: sgabsi <sgabsi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 18:07:33 by sgabsi            #+#    #+#             */
-/*   Updated: 2024/05/27 13:40:50 by sgabsi           ###   ########.fr       */
+/*   Updated: 2024/12/02 09:40:30 by sgabsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ char	*ft_get_line(char *save)
 	while (save[i] && save[i] != '\n')
 		i++;
 	line = (char *)ft_calloc(i + 2, sizeof(char));
+	if (!line)
+		return (NULL);
 	i = 0;
 	while (save[i] && save[i] != '\n')
 	{

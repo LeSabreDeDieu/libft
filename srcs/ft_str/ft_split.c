@@ -6,7 +6,7 @@
 /*   By: sgabsi <sgabsi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 16:32:04 by sgabsi            #+#    #+#             */
-/*   Updated: 2024/06/02 14:51:52 by gcaptari         ###   ########.fr       */
+/*   Updated: 2024/12/16 09:15:30 by sgabsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,24 +35,19 @@ static int	count_words(const char *s, char c)
 
 static char	*extract_word(const char *s, char c, size_t *len)
 {
-	char	*word;
-	char	*m;
+	const char	*start = s;
 
-	m = (char *)s;
-	while (*m && *m != c)
-		m++;
-	*len = m - s;
-	word = ft_substr(s, 0, *len);
-	return (word);
+	while (*s && *s != c)
+		s++;
+	*len = s - start;
+	return (ft_substr(start, 0, *len));
 }
 
-static void	ft_clear(char **tab, size_t indice)
+static void	ft_clear(char **tab, size_t index)
 {
-	size_t	i;
-
-	i = -1;
-	while (++i <= indice)
-		(free(tab[i]), tab[i] = NULL);
+	for (size_t i = 0; i <= index; i++)
+		free(tab[i]);
+	free(tab);
 }
 
 static char	**ft_fill(const char *s, char c, char **result)
@@ -67,7 +62,10 @@ static char	**ft_fill(const char *s, char c, char **result)
 		{
 			*move = extract_word(s, c, &word_len);
 			if (!*move)
-				return (ft_clear(result, move - result), free(result), NULL);
+			{
+				ft_clear(result, move - result);
+				return (NULL);
+			}
 			move++;
 			s += word_len;
 		}
@@ -88,6 +86,5 @@ char	**ft_split(char const *s, char c)
 	result = (char **)ft_calloc((word_count + 1), sizeof(char *));
 	if (!result)
 		return (NULL);
-	result = ft_fill(s, c, result);
-	return (result);
+	return (ft_fill(s, c, result));
 }

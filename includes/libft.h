@@ -6,7 +6,7 @@
 /*   By: sgabsi <sgabsi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 11:48:24 by sgabsi            #+#    #+#             */
-/*   Updated: 2024/11/30 12:08:16 by sgabsi           ###   ########.fr       */
+/*   Updated: 2025/01/21 16:01:38 by sgabsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@
 
 // BUFFER_SIZE FOR GET_NEXT_LINE
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1024
+#  define BUFFER_SIZE 1
 # endif
 
 // STRUCT FOR BONUS

@@ -6,7 +6,7 @@
 /*   By: sgabsi <sgabsi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 14:57:46 by sgabsi            #+#    #+#             */
-/*   Updated: 2024/10/16 12:12:58 by sgabsi           ###   ########.fr       */
+/*   Updated: 2024/12/16 09:28:24 by sgabsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ char	*ft_strndup(const char *s1, size_t n)
 	len = ft_strlen(s1);
 	if (len > n)
 		len = n;
-	s2 = (char *)ft_calloc(len + 1, sizeof (char));
+	s2 = (char *)ft_calloc(len + 1, sizeof(char));
 	if (!s2)
 		return (NULL);
-	return ((char *)ft_memmove(s2, s1, len));
+	return (char *)ft_memmove(s2, s1, len);
 }
 
 char	*ft_strdup(const char *s1)

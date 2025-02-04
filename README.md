@@ -9,7 +9,7 @@
 <p align="center">
 	<b><i> our very first own library </i></b>
 </p>
----
+
 <p align="center">
 	<img src="https://img.shields.io/badge/Score-125-green?style=none&logo=42" alt="Score project :125"/>
 	<img alt="Static Badge" src="https://img.shields.io/badge/Outstanding-2-blue?style=none&logo=42">

@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-	<b><i> our very first own library </i></b>
+	<b><i> Your very first own library </i></b>
 </p>
 
 <p align="center">

@@ -113,7 +113,8 @@ The `libft.h` header file contains declarations for all the functions provided b
 
 ### ADDITION FUNCTION
 
-- get_next_line
+- `get_next_line`
+- `ft_printf`
 
 ## Compilation
 

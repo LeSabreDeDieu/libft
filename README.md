@@ -9,11 +9,6 @@
 <p align="center">
 	<b><i> our very first own library </i></b>
 </p>
-
-<p align="center">
-	<img src="https://raw.githubusercontent.com/ayogun/42-project-badges/refs/heads/main/badges/libftm.png" alt="libft_logo" />
-</p>
-
 ---
 <p align="center">
 	<img src="https://img.shields.io/badge/Score-125-green?style=none&logo=42" alt="Score project :125"/>

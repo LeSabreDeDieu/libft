@@ -38,13 +38,6 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
-struct				s_bypass_trim
-{
-	size_t			len_start;
-	size_t			len_end;
-	size_t			real_len;
-};
-
 // MANDATORY
 /**
  * @file libft.h

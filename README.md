@@ -1,6 +1,4 @@
-<p align="center">
-	<img src="https://github.com/ayogun/42-project-badges/blob/main/covers/cover-libft-bonus.png" alt="libft_cover" />
-</p>
+
 
 <h1 align="center">
 	42 Project - Libft
@@ -8,6 +6,10 @@
 
 <p align="center">
 	<b><i> our very first own library </i></b>
+</p>
+
+<p align="center">
+	<img src="https://github.com/ayogun/42-project-badges/blob/main/covers/cover-libft-bonus.png" alt="libft_cover" />
 </p>
 
 <p align="center">

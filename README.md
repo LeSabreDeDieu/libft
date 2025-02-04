@@ -1,4 +1,21 @@
-# Libft - A Custom C Library
+<h1 align="center">
+	42 Project - Libft
+</h1>
+
+<p align="center">
+	<b><i> our very first own library </i></b>
+</p>
+
+<p align="center">
+	<img src="https://raw.githubusercontent.com/ayogun/42-project-badges/refs/heads/main/badges/libftm.png" alt="libft_logo" />
+</p>
+
+---
+<p align="center">
+	<img src="https://img.shields.io/badge/Score-120-darkgreen?style=none&logo=42" alt="Score project :125"/>
+	<img alt="Static Badge" src="https://img.shields.io/badge/Outstanding-2-blue?style=none&logo=42">
+	<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/LeSabreDeDieu/Cub3D?style=none&logo=github">
+</p>
 
 ## Table of Contents
 
